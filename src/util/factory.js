@@ -309,7 +309,7 @@ const GoogleSheetInput = function () {
       : window.location.href.match(/sheetId(.*)/)
     const queryParams = queryString ? QueryParams(queryString[0]) : {}
 
-    const paramId = featureToggles.UIRefresh2022 ? queryParams.documentId : queryParams.sheetId
+    const paramId = './myradar/radar.json'
     if (paramId && paramId.endsWith('.csv')) {
       sheet = CSVDocument(paramId)
       sheet.init().build()
